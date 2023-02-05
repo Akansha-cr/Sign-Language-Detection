@@ -3,7 +3,7 @@ import streamlit as st
 from PIL import Image
 
 # Load the TensorFlow Lite model
-model = tf.lite.Interpreter("path/to/model.tflite")
+model = tf.lite.Interpreter("model.tflite")
 model.allocate_tensors()
 
 # Get input and output tensors
