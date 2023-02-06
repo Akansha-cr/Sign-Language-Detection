@@ -1,6 +1,3 @@
-import streamlit as st
-st.text("hello")
-'''
 import tensorflow as tf
 import streamlit as st
 from PIL import Image
@@ -44,4 +41,4 @@ if image_file is not None:
     output = classify_image(model, image)
     label = "Class: " + str(np.argmax(output))
     st.write(label)
-'''
+
