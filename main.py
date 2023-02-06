@@ -40,6 +40,5 @@ if image_file is not None:
 
     # Classify the image
     output = classify_image(model, image)
-    label = "Class: " + str(np.argmax(output))
-    st.write(label)
+    st.write(output)
 
