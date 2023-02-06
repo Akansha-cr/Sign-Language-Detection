@@ -37,7 +37,7 @@ image_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 if image_file is not None:
     image = Image.open(image_file)
     st.image(image, use_column_width=True)
-
+    model.predict(image)
     # Classify the image
     output = classify_image(model, image)
     st.write(output)
