@@ -30,13 +30,14 @@ def classify_image(model, image):
 
 # Create a Streamlit app
 st.set_page_config(page_title="Image Classification", page_icon=":camera:", layout="wide")
-st.title("sign language detection with TensorFlow Lite")
+st.title("Image Classification with TensorFlow Lite")
 
 # Get the input image
 image_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 if image_file is not None:
     image = Image.open(image_file)
     st.image(image, use_column_width=True)
+    
 # Classify the image
     output = classify_image(model, image)
     label = "Class: " + str(np.argmax(output))
