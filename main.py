@@ -47,5 +47,5 @@ if image_file is not None:
     label = np.argmax(output)
     class_label = st.markdown(class_labels[label])
     for class_labels in label:
-    print(class_labels.value())
+        print(class_labels.value())
 
