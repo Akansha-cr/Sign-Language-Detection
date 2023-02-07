@@ -50,7 +50,7 @@ if image_file is not None:
     all_classes = []
     for i in range(num_classes):
         class_prob = output[0][i]
-        class_label = class_labels[i]
+        class_label = class_labels[class_index]
         all_classes.append((class_label, class_prob))
 
         st.write("Class probabilities:", all_classes)
