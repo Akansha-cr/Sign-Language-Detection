@@ -44,7 +44,9 @@ if image_file is not None:
                     'Class 10':"A",'Class 11': "B",'Class 12': "C",'Class 13': "D",'Class 14': "E",'Class 15': "F",'Class 16': "G",'Class 17': "H",'Class 18': "I",'Class 19':"J",
                     'Class 20': "K",'Class 21': "L",'Class 22': "M",'Class 23': "N",'Class 24': "O",'Class 25': "P",'Class 26': "Q",'Class 27': "R",'Class 28': "S",'Class 29': "T",
                     'Class 30':"U",'Class 31': "V",'Class 32': "W",'Class 33': "X",'Class 34': "Y",'Class 35': "Z"}
-    label = np.argmax(output)
-    class_label = class_labels[label]
-    print(class_labels.value())
+   # Get the class index
+   class_index = np.argmax(model_output)
+
+# Get the corresponding class label using the class_labels dictionary
+   class_label = class_labels[class_index]
 
