@@ -42,4 +42,6 @@ if image_file is not None:
     label = "Class: " + str(np.argmax(output))
     st.write(label)
     st.write(output)
-    
+    class_index = (np.argmax(output))
+    class_label = class_labels[f'Class {class_index+1}']
+    st.write(class_label)
