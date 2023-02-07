@@ -51,9 +51,9 @@ if image_file is not None:
     for i in range(num_classes):
         class_prob = output[0][i]
         class_label = class_labels[class_index]
-        print(class_label)
+        st.write(class_label)
         all_classes.append((class_label, class_prob))
 
-        st.write(max("Class probabilities:", all_classes))
+        st.write("Class probabilities:", all_classes)
 # Get the corresponding class label using the class_labels dictionary
     
