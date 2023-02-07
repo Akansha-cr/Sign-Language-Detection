@@ -41,7 +41,6 @@ if image_file is not None:
 # Classify the image
     output = classify_image(model, image)
     label = "Class: " + str(np.argmax(output))
-    if output == output.any(2):
-        print("C")
     st.write(label)
+    st.write(output)
     
