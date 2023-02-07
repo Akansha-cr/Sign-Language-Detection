@@ -42,6 +42,6 @@ if image_file is not None:
     output = classify_image(model, image)
     class_labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     label = np.argmax(output)
-    class_label = class_labels[label]
+    class_label = st.markdown(class_labels[label])
 
 
