@@ -40,13 +40,11 @@ if image_file is not None:
     
 # Classify the image
     output = classify_image(model, image)
-    class_labels = {'Class 1':"1", 'Class 2':"2",'Class 3': "3",'Class 4': "4",'Class 5': "5",'Class 6': "6",'Class 7': "7",'Class 8': "8",'Class 9': "9",
-                    'Class 10':"A",'Class 11': "B",'Class 12': "C",'Class 13': "D",'Class 14': "E",'Class 15': "F",'Class 16': "G",'Class 17': "H",'Class 18': "I",'Class 19':"J",
-                    'Class 20': "K",'Class 21': "L",'Class 22': "M",'Class 23': "N",'Class 24': "O",'Class 25': "P",'Class 26': "Q",'Class 27': "R",'Class 28': "S",'Class 29': "T",
-                    'Class 30':"U",'Class 31': "V",'Class 32': "W",'Class 33': "X",'Class 34': "Y",'Class 35': "Z"}
+    class_labels = {0:"1", 1:"2",2: "3",3: "4",4: "5",5: "6",6: "7",7: "8",8: "9",
+                    9:"A", 10: "B", 11: "C", 12: "D", 13: "E", 14: "F", 15: "G", 16: "H", 17: "I", 18:"J",
+                    19: "K", 20: "L", 21: "M", 22: "N", 23: "O", 24: "P", 25: "Q", 26: "R", 27: "S", 28: "T",
+                    29:"U", 30: "V", 31: "W", 32: "X", 33: "Y", 34: "Z"}
     class_index = (np.argmax(output))
-    label = "Class: " + str(np.argmax(output))
-    class_label = class_labels[label]
+    class_label = class_labels[class_index]
     st.write(class_label)
-    st.write(label)
     
