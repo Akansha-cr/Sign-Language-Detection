@@ -46,4 +46,4 @@ if image_file is not None:
 
 # Get the corresponding class label using the class_labels dictionary
     class_label = class_labels[class_index]
-
+    print(class_label)
