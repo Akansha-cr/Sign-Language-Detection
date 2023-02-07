@@ -46,6 +46,6 @@ if image_file is not None:
                     'Class 30':"U",'Class 31': "V",'Class 32': "W",'Class 33': "X",'Class 34': "Y",'Class 35': "Z"}
     label = np.argmax(output)
     class_label = st.markdown(class_labels[label])
-for class_labels in label:
+    for class_labels in label:
     print(class_labels.value())
 
