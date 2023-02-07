@@ -21,7 +21,7 @@ def preprocess_image(image):
 
 # Run inference on the input image
 def classify_image(model, image):
-    input_data = np.array(preprocess_image(image), dtype=np.uint.8)
+    input_data = np.array(preprocess_image(image), dtype=np.uint8)
     input_data = np.expand_dims(input_data, axis=0)
     model.set_tensor(input_details[0]['index'], input_data)
     model.invoke()
