@@ -1,5 +1,4 @@
 import tensorflow as tf
-import numpy as np
 import streamlit as st
 from PIL import Image
 
@@ -21,7 +20,7 @@ def preprocess_image(image):
 
 # Run inference on the input image
 def classify_image(model, image):
-    input_data = np.array(preprocess_image(image), dtype=np.uint8)
+    input_data = np.array(preprocess_image(image), dtype=np.float32)
     input_data = np.expand_dims(input_data, axis=0)
     model.set_tensor(input_details[0]['index'], input_data)
     model.invoke()
@@ -37,8 +36,8 @@ image_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 if image_file is not None:
     image = Image.open(image_file)
     st.image(image, use_column_width=True)
-    
-# Classify the image
+
+    # Classify the image
     output = classify_image(model, image)
     label = "Class: " + str(np.argmax(output))
     st.write(label)
